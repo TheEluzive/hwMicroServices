@@ -11,3 +11,19 @@ http://localhost:9000/aggregator/value
 http://localhost:9000/aggregator/value
 Authorization: top-secret
 
+
+
+###
+
+POST http://localhost:5555/register
+Content-Type: application/json
+
+{
+  "type": "payment",
+  "id": 1,
+  "senderId": 5,
+  "amount": 1,
+  "comment": "lalala24543"
+}
+
+###
