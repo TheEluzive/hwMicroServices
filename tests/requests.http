@@ -15,7 +15,7 @@ Authorization: top-secret
 
 ###
 
-POST http://localhost:64117/api/payments
+POST http://localhost:64657/api/payments
 Content-Type: application/json
 
 {
@@ -36,7 +36,7 @@ Content-Type: application/json
   "id": 2,
   "senderId": 1,
   "amount": 100,
-  "comment": "la1"
+  "comment": "PLEASE WORK"
 }
 
 ###
