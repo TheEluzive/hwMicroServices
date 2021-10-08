@@ -31,7 +31,7 @@ public class KafkaConsumerApplication {
   @KafkaListener(groupId = "consumer", topics = "payments")
   public void listen(Payment message, ConsumerRecord<String, Payment> record, Acknowledgment acknowledgment) {
     logger.info(message);
-    //send(message);
+    send(message);
 
     acknowledgment.acknowledge();
 

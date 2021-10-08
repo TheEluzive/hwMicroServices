@@ -51,14 +51,11 @@ public class DataApplication {
   }
 
 
-  @KafkaListener(groupId = "consumer", topics = "payments")
+  @KafkaListener(groupId = "consumer", topics = "featuredPayments")
   public void listen(Payment message, ConsumerRecord<String, Payment> record, Acknowledgment acknowledgment) {
     logger.info(message);
     dataService.addPayment(message);
-
-
     acknowledgment.acknowledge();
-
   }
 
 
