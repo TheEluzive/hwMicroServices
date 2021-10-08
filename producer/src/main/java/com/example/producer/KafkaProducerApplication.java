@@ -35,7 +35,7 @@ public class KafkaProducerApplication {
     SpringApplication.run(KafkaProducerApplication.class, args);
   }
 
-  @PostMapping("/register")
+  @PostMapping("/api/payments")
   public void registerPayment(@RequestBody Payment payment){
     send(payment);
   }

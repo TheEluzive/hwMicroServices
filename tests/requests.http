@@ -15,15 +15,28 @@ Authorization: top-secret
 
 ###
 
-POST http://localhost:5555/register
+POST http://localhost:64117/api/payments
 Content-Type: application/json
 
 {
   "type": "payment",
-  "id": 1,
-  "senderId": 5,
-  "amount": 1,
-  "comment": "lalala24543"
+  "id": 2,
+  "senderId": 1,
+  "amount": 100,
+  "comment": "xyz"
+}
+
+###
+
+POST http://localhost:9000/producer/api/payments
+Content-Type: application/json
+
+{
+  "type": "payment",
+  "id": 2,
+  "senderId": 1,
+  "amount": 100,
+  "comment": "la1"
 }
 
 ###
