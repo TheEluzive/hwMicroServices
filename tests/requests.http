@@ -36,7 +36,12 @@ Content-Type: application/json
   "id": 2,
   "senderId": 1,
   "amount": 100,
-  "comment": "PLEASE WORK"
+  "comment": "tesr54"
 }
+
+###
+
+GET http://localhost:9000/aggregator/api/payments
+
 
 ###

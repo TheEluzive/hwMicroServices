@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.Optional;
 
 @SpringBootApplication
@@ -39,11 +40,16 @@ public class DataApplication {
   @Setter(onMethod_={@Value("${app.id}")})
   private String id;
 
-  @GetMapping
-  public ResponseDto endpoint(@RequestHeader Optional<String> authorization) {
-    logger.info("request");
-//    throw new RuntimeException();
-    return new ResponseDto(id);
+//  @GetMapping
+//  public ResponseDto endpoint(@RequestHeader Optional<String> authorization) {
+//    logger.info("request");
+////    throw new RuntimeException();
+//    return new ResponseDto(id);
+//  }
+
+  @GetMapping("/payments")
+  public List<Payment> getPayments() {
+    return dataService.getPayments();
   }
 
   public static void main(String[] args) {
@@ -57,8 +63,5 @@ public class DataApplication {
     dataService.addPayment(message);
     acknowledgment.acknowledge();
   }
-
-
-
 
 }
