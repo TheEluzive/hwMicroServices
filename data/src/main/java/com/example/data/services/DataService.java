@@ -1,17 +1,20 @@
-package com.example.data.dto;
+package com.example.data.services;
 
 
+import com.example.data.dto.Payment;
 import lombok.AllArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-@Service
+
 @AllArgsConstructor
+@Repository
 public class DataService {
     private final JdbcTemplate jdbcTemplate;
 

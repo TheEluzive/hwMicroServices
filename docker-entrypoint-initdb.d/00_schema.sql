@@ -1,7 +1,7 @@
 CREATE TABLE users
 (
-    id       bigint  NOT NULL GENERATED ALWAYS AS IDENTITY,
-    username TEXT        NOT NULL UNIQUE,
+    id       bigint,
+    username TEXT,
     PRIMARY KEY (id)
 );
 

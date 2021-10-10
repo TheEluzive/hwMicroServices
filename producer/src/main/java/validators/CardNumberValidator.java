@@ -1,8 +1,6 @@
 package validators;
 
-import com.example.producer.data.Payment;
 import lombok.AllArgsConstructor;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import javax.validation.ConstraintValidator;

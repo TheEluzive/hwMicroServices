@@ -1,7 +1,6 @@
 package validators;
 
 import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Service;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
