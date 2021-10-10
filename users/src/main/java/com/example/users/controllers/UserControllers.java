@@ -17,9 +17,9 @@ public class UserControllers {
     private final UserService userService;
 
     @PostMapping("/getUsersByArrayId")
-    public ArrayList<UsernameDto> getUser(@RequestBody HashMap<Long, Long> senderIdMap, HttpServletRequest request){
+    public ArrayList<UsernameDto> getUser(@RequestBody HashMap<Long, Long> senderIdMap, HttpServletRequest request) {
         final var users = new ArrayList<UsernameDto>();
-        for (Long id: senderIdMap.values()) {
+        for (Long id : senderIdMap.values()) {
             users.add(
                     new UsernameDto(
                             id,

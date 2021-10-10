@@ -64,8 +64,6 @@
         </dependency>
 
 
-
-
         <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -85,7 +83,6 @@
             <artifactId>hibernate-validator</artifactId>
             <version>7.0.0.Final</version>
         </dependency>
-
 
 
         <dependency>

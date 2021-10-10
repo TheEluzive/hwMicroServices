@@ -17,10 +17,8 @@ public class PaymentController {
     private final KafkaActions kafkaActions;
 
 
-
-
     @PostMapping("/api/payments")
-    public void registerPayment(@RequestBody @Valid Payment payment){
+    public void registerPayment(@RequestBody @Valid Payment payment) {
         kafkaActions.send(payment);
     }
 

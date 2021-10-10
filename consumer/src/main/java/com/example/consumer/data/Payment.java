@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class Payment implements Payload {
-  private long id;
-  private long senderId;
-  private long amount;
-  private String comment;
+    private long id;
+    private long senderId;
+    private long amount;
+    private String comment;
 }

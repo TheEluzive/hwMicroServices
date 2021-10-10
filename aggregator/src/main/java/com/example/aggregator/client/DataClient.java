@@ -9,9 +9,9 @@ import java.util.List;
 
 @FeignClient(value = "data")
 public interface DataClient {
-  @GetMapping
-  ResponseDto getValue();
+    @GetMapping
+    ResponseDto getValue();
 
-  @GetMapping("/payments")
-  List<Payment> getPayments();
+    @GetMapping("/payments")
+    List<Payment> getPayments();
 }

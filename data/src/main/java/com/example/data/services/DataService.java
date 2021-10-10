@@ -4,12 +4,8 @@ package com.example.data.services;
 import com.example.data.dto.Payment;
 import lombok.AllArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 
 
@@ -18,7 +14,7 @@ import java.util.List;
 public class DataService {
     private final JdbcTemplate jdbcTemplate;
 
-    public void addPayment(Payment payment){
+    public void addPayment(Payment payment) {
         jdbcTemplate.update(
                 "insert into payments(\"senderId\", amount, comment) values (?,?,?)",
                 payment.getSenderId(),
@@ -36,7 +32,7 @@ public class DataService {
                         resultSet.getLong("senderId"),
                         resultSet.getLong("amount"),
                         resultSet.getString("comment")
-                        )
+                )
         );
     }
 }

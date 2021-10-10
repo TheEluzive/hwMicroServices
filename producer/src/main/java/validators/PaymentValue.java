@@ -13,6 +13,8 @@ import java.lang.annotation.Target;
 @Constraint(validatedBy = PaymentValueValidator.class)
 public @interface PaymentValue {
     String message() default "Invalid payment value";
+
     Class<?>[] groups() default {};
+
     Class<? extends Payload>[] payload() default {};
 }

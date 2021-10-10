@@ -13,11 +13,11 @@ import javax.validation.constraints.Size;
 @Data
 public class Payment implements Payload {
 
-  private long id;
-  @CardNumber
-  private long senderId;
-  @PaymentValue
-  private long amount;
-  @Size(min = 1, max = 20)
-  private String comment;
+    private long id;
+    @CardNumber
+    private long senderId;
+    @PaymentValue
+    private long amount;
+    @Size(min = 1, max = 20)
+    private String comment;
 }

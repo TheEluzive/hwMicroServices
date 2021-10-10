@@ -13,6 +13,8 @@ import java.lang.annotation.Target;
 @Constraint(validatedBy = CardNumberValidator.class)
 public @interface CardNumber {
     String message() default "Invalid card number";
+
     Class<?>[] groups() default {};
+
     Class<? extends Payload>[] payload() default {};
 }

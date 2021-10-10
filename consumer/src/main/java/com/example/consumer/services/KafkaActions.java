@@ -32,7 +32,7 @@ public class KafkaActions {
 
     }
 
-    public void send(Payment payment){
+    public void send(Payment payment) {
         final ListenableFuture<SendResult<String, Payment>> future = template.send(
                 new ProducerRecord<>("featuredPayments", "ibank", payment
                 ));
@@ -52,6 +52,6 @@ public class KafkaActions {
 
     @Bean // Kafka Admin
     public NewTopic messagesTopic() {
-        return new NewTopic("featuredPayments", 3, (short)2);
+        return new NewTopic("featuredPayments", 3, (short) 2);
     }
 }

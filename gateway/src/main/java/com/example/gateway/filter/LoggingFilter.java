@@ -10,11 +10,11 @@ import reactor.core.publisher.Mono;
 @Component
 @CommonsLog
 public class LoggingFilter implements GlobalFilter {
-  @Override
-  public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-    log.info(exchange.getRequest().getURI());
-    log.info(exchange.getRequest().getId());
+    @Override
+    public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+        log.info(exchange.getRequest().getURI());
+        log.info(exchange.getRequest().getId());
 
-    return chain.filter(exchange);
-  }
+        return chain.filter(exchange);
+    }
 }

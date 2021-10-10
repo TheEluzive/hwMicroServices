@@ -1,6 +1,6 @@
 package com.example.users.exception;
 
-public class UnexeptedResultException extends RuntimeException{
+public class UnexeptedResultException extends RuntimeException {
     public UnexeptedResultException() {
     }
 

@@ -20,7 +20,7 @@ public class KafkaActions {
     private final KafkaTemplate<String, Payment> template;
     private final Log logger = LogFactory.getLog(this.getClass());
 
-    public void send(Payment payment){
+    public void send(Payment payment) {
         final ListenableFuture<SendResult<String, Payment>> future = template.send(
                 new ProducerRecord<>("payments", "ibank", payment));
         future.addCallback(new ListenableFutureCallback<>() {
@@ -39,7 +39,7 @@ public class KafkaActions {
 
     @Bean // Kafka Admin
     public NewTopic messagesTopic() {
-        return new NewTopic("payments", 3, (short)2);
+        return new NewTopic("payments", 3, (short) 2);
     }
 
 }

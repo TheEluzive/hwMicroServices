@@ -8,10 +8,10 @@ CREATE TABLE users
 
 CREATE TABLE payments
 (
-    id bigint NOT NULL GENERATED ALWAYS AS IDENTITY,
+    id         bigint NOT NULL GENERATED ALWAYS AS IDENTITY,
     "senderId" bigint,
-    amount bigint,
-    comment text,
+    amount     bigint,
+    comment    text,
     PRIMARY KEY (id),
     CONSTRAINT fkey_user_id FOREIGN KEY ("senderId")
         REFERENCES users (id)
