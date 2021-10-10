@@ -22,43 +22,13 @@ import java.util.HashMap;
 import java.util.List;
 
 @SpringBootApplication
-@RestController
-
 public class UsersApplication {
-  private final Log logger = LogFactory.getLog(this.getClass());
-  private UserService userService;
-
-  @Bean
-  public UserService startService(JdbcTemplate jdbcTemplate){
-    this.userService = new UserService(jdbcTemplate);
-    return this.userService;
-  };
-
-  @PostMapping("/getUsersByArrayId")
-
-
-  public ArrayList<UsernameDto> getUser(@RequestBody HashMap<Long, Long> senderIdMap, HttpServletRequest request){
-    final var users = new ArrayList<UsernameDto>();
-    for (Long id: senderIdMap.values()) {
-      users.add(
-              new UsernameDto(
-                      id,
-                      userService.getUsernameById(id)
-              )
-      );
-    }
-
-    return users;
-  }
 
   @Setter(onMethod_={@Value("${app.id}")})
   private String id;
 
-
-
   public static void main(String[] args) {
     SpringApplication.run(UsersApplication.class, args);
   }
-
 
 }

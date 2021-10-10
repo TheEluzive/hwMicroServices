@@ -14,12 +14,12 @@ import java.util.List;
 @AllArgsConstructor
 public class DataController {
 
-    //private final DataService dataService;
+    private final DataService dataService;
 
     @GetMapping("/payments")
     public List<Payment> getPayments() {
 
-        //return dataService.getPayments();
-        return null;
+        return dataService.getPayments();
+
     }
 }
