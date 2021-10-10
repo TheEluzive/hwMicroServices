@@ -33,10 +33,10 @@ Content-Type: application/json
 
 {
   "type": "payment",
-  "id": 2,
-  "senderId": 1,
-  "amount": 100,
-  "comment": "tesr54"
+  "id": -55,
+  "senderId": -51,
+  "amount": -100,
+  "comment": "OKA5555555333333333333333333333335AY"
 }
 
 ###
